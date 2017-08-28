@@ -1,0 +1,6 @@
+the command i used to look at the first 10 lines of a file was
+head -10 filename eg head -10 top-ten-songs.html
+the command i used to look at the last 10 lines of a file was
+tail -10 filename eg tail -10 top-ten-songs.html
+to find a string of text in a file i used 
+grep -r 'text' path eg grep -r 'The Nightingale' 2015-books/ (from the 2015-media folder)
