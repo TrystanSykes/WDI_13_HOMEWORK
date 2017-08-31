@@ -1,5 +1,5 @@
-var origin = "Flinders Street";
-var destination = "East Richmond";
+var origin = "Hawthorn";
+var destination = "Flinders Street";
 
 var alamein = ["Flinders Street", "Richmond", "East Richmond", "Burnley", "Hawthorn", "Glenferrie"];
 
@@ -7,16 +7,26 @@ var glenWaverley = ["Flagstaff", "Melbourne Central", "Parliament", "Richmond", 
 
 var sandringham = ["Southern Cross", "Richmond", "South Yarra", "Prahran", "Windsor"];
 
-var trainLines = [alamein, glenWaverley, sandringham];
-//using index of and slice we can print from our origin and dest indicies. aim to be able to move between any 2 stations in a line by the end of tonight. backwards too maybe.
 
-var trip = [];
+
 var startingLine = [];
+var endingLine = [];
 
 function checkStartingLine (originStation, line) {
   for (var i = 0; i < line.length; i++) {
-    if (line[i].match(originStation)) {
+    if (line[i] === originStation) {
       startingLine.push(line);
+    } 
+      else {
+          break;
+    }
+  }
+};
+
+function checkEndingLine (endStation, line) {
+  for (var i = 0; i < line.length; i++) {
+    if (line[i] === endStation) {
+      endingLine.push(line);
     } 
       else {
           break;
@@ -27,34 +37,67 @@ function checkStartingLine (originStation, line) {
 checkStartingLine(origin, alamein);
 checkStartingLine(origin, glenWaverley);
 checkStartingLine(origin, sandringham);
+checkEndingLine(destination, alamein);
+checkEndingLine(destination, glenWaverley);
+checkEndingLine(destination, sandringham);
 
-
-if (startingLine[0] === alamein) {
-  for (var i = 0; i < alamein.length; i++) {
-    if (origin === alamein[i]) {
-      var start = alamein.indexOf(alamein[i]);
-      for (var j = 0; j < alamein.length; j++) {
-        if (destination === alamein[j]) {
-          var end = alamein.indexOf(alamein[j]);
-  }     if (start < end) {
-          var range = alamein.slice(start, end += 1);
-          console.log(range);
-  }     else {
-          var range = alamein.slice(end, start += 1);
-          console.log(range);
-          range.reverse();
-  }
+if (startingLine === endingLine) {
+  for (var i = 0; i < startingLine[0].length; i++) {
+    if (origin === startingLine[0][i]) {
+      var start = startingLine[0].indexOf(startingLine[0][i]);
     }
   }
+  for (var j = 0; j < startingLine[0].length; j++) {
+    if (destination === startingLine[0][j]) {
+      var end = startingLine[0].indexOf(startingLine[0][j]);
+    }
+  }
+  if (start < end) {
+    var range = startingLine[0].slice(start, end += 1);
+    }
+    else {
+      var range = startingLine[0].slice(end, start += 1);
+        range.reverse();
+  }
+} else {
+    for (var i = 0; i < startingLine[0].length; i++) {
+      if (origin === startingLine[0][i]) {
+        var start = startingLine[0].indexOf(startingLine[0][i]);
+      }
+    }
+    var midOne = startingLine[0].indexOf("Richmond");
+
+    for (var i = 0; i < endingLine[0].length; i++) {
+      if (destination === endingLine[0][i]) {
+        var end = endingLine[0].indexOf(endingLine[0][i]);
+      }
+    }
+    var midTwo = endingLine[0].indexOf("Richmond");
+  } if (start < midOne) {
+    var firstRange = startingLine[0].slice(start, midOne += 1);
+    }
+    else {
+      var firstRange = startingLine[0].slice(midOne, start += 1);
+        firstRange.reverse();  
+    }
+    if (midTwo < end) {
+      var secondRange = endingLine[0].slice(midTwo, end += 1);
+    } else {
+      var secondRange = endingLine[0].slice(end, midTwo += 1);
+      secondRange.reverse();
 }
-}
+  
 
 
 
-trip.push(range);
+
+
+firstRange.pop();
+trip = firstRange.concat(secondRange);
 
 
 
-var output = "Origin: " + origin + "\nDestination: " + destination + "\n\n" + trip[0].join(" ------> ") + "\n\n" + trip[0].length + " stops total"
+
+var output = "Origin: " + origin + "\nDestination: " + destination + "\n\n" + trip.join(" ------> ") + "\n\n" + trip.length + " stops total"
 
 console.log(output)
