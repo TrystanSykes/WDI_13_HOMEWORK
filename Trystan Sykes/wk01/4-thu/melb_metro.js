@@ -1,5 +1,5 @@
-var origin = "Hawthorn";
-var destination = "Flinders Street";
+var origin = "Windsor";
+var destination = "Glenferrie";
 
 var alamein = ["Flinders Street", "Richmond", "East Richmond", "Burnley", "Hawthorn", "Glenferrie"];
 
@@ -16,9 +16,6 @@ function checkStartingLine (originStation, line) {
   for (var i = 0; i < line.length; i++) {
     if (line[i] === originStation) {
       startingLine.push(line);
-    } 
-      else {
-          break;
     }
   }
 };
@@ -27,9 +24,6 @@ function checkEndingLine (endStation, line) {
   for (var i = 0; i < line.length; i++) {
     if (line[i] === endStation) {
       endingLine.push(line);
-    } 
-      else {
-          break;
     }
   }
 };
