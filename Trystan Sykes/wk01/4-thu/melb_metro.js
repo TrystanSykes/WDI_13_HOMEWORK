@@ -1,11 +1,11 @@
-var origin = "Windsor";
-var destination = "Glenferrie";
+var origin = prompt("What is your station of origin?")
+var destination = prompt("What is your destination station");
 
-var alamein = ["Flinders Street", "Richmond", "East Richmond", "Burnley", "Hawthorn", "Glenferrie"];
+var alamein = ["flinders street", "richmond", "east richmond", "burnley", "hawthorn", "glenferrie"];
 
-var glenWaverley = ["Flagstaff", "Melbourne Central", "Parliament", "Richmond", "Kooyong", "Tooronga"];
+var glenWaverley = ["flagstaff", "melbourne central", "parliament", "richmond", "kooyong", "tooronga"];
 
-var sandringham = ["Southern Cross", "Richmond", "South Yarra", "Prahran", "Windsor"];
+var sandringham = ["southern cross", "richmond", "south yarra", "prahran", "windsor"];
 
 
 
@@ -53,34 +53,34 @@ if (startingLine === endingLine) {
       var range = startingLine[0].slice(end, start += 1);
         range.reverse();
   }
-} else {
-    for (var i = 0; i < startingLine[0].length; i++) {
-      if (origin === startingLine[0][i]) {
-        var start = startingLine[0].indexOf(startingLine[0][i]);
-      }
+} 
+else {
+  for (var i = 0; i < startingLine[0].length; i++) {
+    if (origin === startingLine[0][i]) {
+      var start = startingLine[0].indexOf(startingLine[0][i]);
     }
-    var midOne = startingLine[0].indexOf("Richmond");
+  }
+  var midOne = startingLine[0].indexOf("richmond");
 
-    for (var i = 0; i < endingLine[0].length; i++) {
-      if (destination === endingLine[0][i]) {
-        var end = endingLine[0].indexOf(endingLine[0][i]);
-      }
+  for (var i = 0; i < endingLine[0].length; i++) {
+    if (destination === endingLine[0][i]) {
+      var end = endingLine[0].indexOf(endingLine[0][i]);
     }
-    var midTwo = endingLine[0].indexOf("Richmond");
-  } if (start < midOne) {
-    var firstRange = startingLine[0].slice(start, midOne += 1);
-    }
-    else {
-      var firstRange = startingLine[0].slice(midOne, start += 1);
-        firstRange.reverse();  
-    }
-    if (midTwo < end) {
-      var secondRange = endingLine[0].slice(midTwo, end += 1);
-    } else {
-      var secondRange = endingLine[0].slice(end, midTwo += 1);
-      secondRange.reverse();
+  }
+  var midTwo = endingLine[0].indexOf("richmond");
+} if (start < midOne) {
+  var firstRange = startingLine[0].slice(start, midOne += 1);
+  }
+  else {
+    var firstRange = startingLine[0].slice(midOne, start += 1);
+      firstRange.reverse();  
+  }
+  if (midTwo < end) {
+    var secondRange = endingLine[0].slice(midTwo, end += 1);
+  } else {
+    var secondRange = endingLine[0].slice(end, midTwo += 1);
+    secondRange.reverse();
 }
-  
 
 
 
