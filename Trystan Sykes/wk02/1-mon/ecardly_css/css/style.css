@@ -1,0 +1,68 @@
+.container {
+  width: 100%;
+}
+header {
+  background-image:url('../images/background.jpg');
+  background-repeat: repeat-x;
+  text-align: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+body {
+  background-color: lightgrey;
+  font-family: 'Roboto', sans-serif;
+}
+.sidebar img {
+  display: block;
+  padding: 15px 0;
+}
+.sidebar {
+  background-color: white;
+  float: right;
+  padding: 10px 20px;
+  width: 25%
+  margin: 10px 100px 10px 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+h4 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+li {
+  padding: 2px;
+}
+
+main {
+  width: 70%;
+}
+article img {
+  width: 95%;
+}
+article p {
+  width: 95%;
+}
+article {
+  background-color: white;
+  margin: 10px 0 10px 100px;
+  padding: 10px;
+}
+.mainbody {
+  width: 90%;
+}
+a {
+  color: darkorange;
+}
+.dotted {
+  border: none;
+  border-top: 1px dotted black;
+}
+footer {
+  text-align: center;
+  padding: 25px 0;
+}
