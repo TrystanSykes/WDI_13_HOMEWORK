@@ -1,6 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 .container {
   width: 100%;
 }
+
 header {
   background-image:url('../images/background.jpg');
   background-repeat: repeat-x;
@@ -13,17 +18,20 @@ body {
   background-color: lightgrey;
   font-family: 'Roboto', sans-serif;
 }
+
 .sidebar img {
   display: block;
-  padding: 15px 0;
+  padding: 15px 15px;
 }
+
 .sidebar {
   background-color: white;
   float: right;
-  padding: 10px 20px;
-  width: 25%
-  margin: 10px 100px 10px 0;
+  /*padding: 10px 20px;*/
+  width: 25%;
+  margin: 0 10px 0 15px;
 }
+
 ul {
   list-style: none;
   padding: 0;
