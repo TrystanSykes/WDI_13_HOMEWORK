@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+</head>
+<body>
+<div class='container'>
+  <header>
+    <img src="logo1.jpg" alt="logo">
+    <h1>Trippa's Bank</h1>
+    <img src="logo1.jpg" alt="logo">
+  </header>
+  <div class='accountBox'>
+    <h4>Savings</h4>
+    <p>your balance is...</p>
+    <div><span>$</span><span id='savBalance'>0.00</span></div>
+    <input id='savUserAmount' type="text" placeholder="Enter amount here">
+    <button id='savWithdraw'>withdraw</button>
+    <button id='savDeposit'>deposit</button>
+  </div>
+  <div class='accountBox'>
+    <h4>Checking</h4>
+    <p>your balance is...</p>
+    <div><span>$</span><span id='chkBalance'>0.00</span></div>
+    <input id='chkUserAmount' type="text" placeholder="Enter amount here">
+    <button id='chkWithdraw'>withdraw</button>
+    <button id='chkDeposit'>deposit</button>
+  </div>
+</div>
+  <script src='app.js'></script>
+</body>
+</html>
