@@ -25,7 +25,7 @@ header {
   display: inline-block;
   width: 25%;
   margin: 10% 10%;
-  border: 2px solid black;
+  border: 7px solid black;
   padding: 0 5px 20px 10px;
   background-color: #2e9cad;
   font-size: 1.5em;
@@ -41,12 +41,14 @@ h1 {
   background-color: #2e9cad;
   border: 2px solid black;
   border-radius: 50px 50px;
+  border: 7px solid black;
 }
 
 img {
   width: 15%;
   margin: 0 auto;
   border-radius: 50px;
+  border: 7px solid black;
 }
 
 input {
