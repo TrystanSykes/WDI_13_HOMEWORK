@@ -1,0 +1,42 @@
+img {
+  width: 35%;
+  border-radius: 50%;
+  display: block;
+
+}
+
+body {
+  background: url('lmbg.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+
+.button-box {
+  text-align: center;
+}
+
+button {
+  width: 30%;
+  font-size: 2em;
+  font-family: 'Righteous', cursive;
+  border-radius: 25%;
+  background-color: darkgrey;
+}
+
+.invis,
+.invis1 {
+  font-size: 2em;
+  border: 2px solid white;
+  width: 20%;
+  color: white; 
+  margin-top: 50px;
+  border-radius: 25%;
+  padding: 20px;
+  transition: 2s;
+  font-family: 'Righteous', cursive;
+  opacity: 0;
+  display: inline-block;
+}
+.invis1 {
+  float: right;
+}
