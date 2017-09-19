@@ -19,6 +19,7 @@ h1 {
   display: inline-block;
   margin: 0 auto;
   padding: 10px;
+  color: white;
 }
 
 button {
@@ -39,6 +40,7 @@ p {
   background-color: #1c56b2;
   border: 3px solid black;
   padding: 10px;
+  color: white;
 }
 
 #split-em {
@@ -78,7 +80,7 @@ p {
 }
 
 .overflow-exp {
-  font-size: 1em;
+  font-size: 1.25em;
   border: 3px solid black;
   font-family: 'Sniglet', cursive;
   display: block;
