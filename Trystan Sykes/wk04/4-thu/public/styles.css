@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.desc {
+  font-size: 2em;
+  padding: 10px;
+  margin: 10px
+}
+
+.box {
+  font-size: 2em;
+}
+
+.submit {
+  font-size: 2em;
+}
+
+.answer {
+  font-size: 2em;
+}

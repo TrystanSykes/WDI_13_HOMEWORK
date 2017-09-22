@@ -1,0 +1,12 @@
+<h1><%= "#{@info['Title']}" %></h1>
+
+<ul> 
+  <li>Released: <%= "#{@info['Released']}" %></li>
+  <li>Director: <%= "#{@info['Director']}" %></li>
+  <li>Cast: <%= "#{@info['Actors']}" %></li>
+  <li>Plot: <%= "#{@info['Plot']}" %></li>
+  <li>IMDB Rating: <%= "#{@info['Ratings'][0]["Value"]}" %></li>
+  <li>Metacritic Rating: <%= "#{@info['Ratings'][2]["Value"]}" %></li>
+</ul>
+
+<img src="<%= "#{@info['Poster']}" %>" alt="">
