@@ -11,7 +11,7 @@ end
 
 get '/about' do
   @title = params[:title]
-  @results = HTTParty.get("http://omdbapi.com/?t=#{@title}&apikey=2f6435d9")
+  @results = HTTParty.get("http://omdbapi.com/?t=#{@title}&apikey=#{ENV['OMDB_API_KEY']}")
   @info = @results.parsed_response
 # binding.pry
   erb :about
