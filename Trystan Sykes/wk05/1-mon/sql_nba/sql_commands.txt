@@ -29,6 +29,7 @@ SELECT team, sum(points) AS team_points FROM players GROUP BY team ORDER BY team
 SELECT age, avg(points/games) as points_per_game FROM players GROUP BY age ORDER BY age asc;
 
 2. Team and the the number of players who score above 12 points per game on that team, ordered from most to least
-SELECT team, count(points/games > 12) AS players_over_12_ppg FROM players GROUP BY team ORDER BY players_over_12_ppg desc;
+SELECT team, count(name) AS players_over_12_ppg FROM players WHERE (points/games) > 12 GROUP BY team ORDER BY players_over_12_ppg desc;
+
 
 

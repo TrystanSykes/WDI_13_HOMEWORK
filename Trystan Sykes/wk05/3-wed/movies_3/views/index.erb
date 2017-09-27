@@ -1,0 +1,12 @@
+<h2>What movie would you like to search?</h2>
+<form action="/" method="get">
+<input type="text" name="title">
+<button>Search</button>
+</form>
+
+<% if @results['Search'][0] == nil %>
+<p>No results found</p>
+<% end %>
+<% @results['Search'].each do |movie| %>
+   <a href="<%= "/about?t=#{movie['Title']}" %>" ><%= "#{movie['Title']}" %></a>
+<% end %>
