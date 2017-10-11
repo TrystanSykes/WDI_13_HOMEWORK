@@ -1,0 +1,16 @@
+<h1>Good Food Hunting</h1>
+
+<a href="/dishes/new"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Create new dish</button></a>
+
+<h2>Most Recent Dishes</h2>
+
+<% @dishes.each do |dish| %>
+<article class='dish'>
+<h2>
+  <a href="/dishes/<%= dish.id %>">
+  <%= dish.name %>
+  </a>
+</h2>
+<a href="/dishes/<%= dish.id %>"><img src="<%= dish.image_url %>" alt=""></a>
+</article>
+<% end %>

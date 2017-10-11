@@ -4,7 +4,7 @@
 <button>Search</button>
 </form>
 
-<% if @results['Search'][0] == nil %>
+<% if @results['Response'] == 'False' %>
 <p>No results found</p>
 <% end %>
 <% @results['Search'].each do |movie| %>

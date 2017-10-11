@@ -21,7 +21,7 @@ get '/' do
     elsif @results['Response'] == 'False'
       @results = HTTParty.get("http://omdbapi.com/?t=#{@title}&apikey=#{ENV['OMDB_API_KEY']}")
       if @results['Response'] == 'False'
-        @results = {}
+        # @results = {}
         @results['Search'] = []
         erb :index
       else
@@ -38,10 +38,10 @@ end
 # end
 
 get '/about' do
-  if Movie.find_by(title: params[:t]) != nil
+  if Movie.find_by(title: params[:t])
+    # change this to unique id
     @results = Movie.find_by(title: params[:t])
     erb :about
-# binding.pry
   else
     @title = params[:t]
     @results = HTTParty.get("http://omdbapi.com/?t=#{@title}&apikey=#{ENV['OMDB_API_KEY']}")
@@ -60,4 +60,5 @@ get '/about' do
 end
 
 
+# binding.pry
 

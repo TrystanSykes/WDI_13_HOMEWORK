@@ -1,0 +1,6 @@
+<%= form_tag "/comments/#{@comment.id}", method: 'put' do %>
+<input type="hidden" name="dish_id" value="<%= @comment.dish_id %>">
+  <label for="">Comment</label>
+  <textarea name="content" id="" cols="30" rows="8"><%= @comment.content %></textarea>
+  <button>Update</button>
+<% end %>

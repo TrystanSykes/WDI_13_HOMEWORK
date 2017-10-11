@@ -1,0 +1,7 @@
+<form action="/dishes/<%= @dish.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="text" name="name" value="<%= @dish.name %>">
+  <textarea name="image_url" id="" cols="30" rows="8"><%= @dish.image_url %></textarea>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type='submit'>Update</button>
+</form>
